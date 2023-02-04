@@ -5,14 +5,14 @@ function App() {
   return (
     <div className="container">
     <div className="container__top">
-      <span >calc</span> 
+      <span className='container__top__calc' >calc</span> 
       <div className="container__top__theme-selector">
-      <span>Theme</span> 
+      <span className='container__top__theme-selector__theme'>THEME</span> 
       <div className="container__top__theme-selector__tool">
-        <div className='theme-number-wrapper' ><div className='row'><span>1</span><span>2</span><span>3</span>
+        <div className='container__top__theme-selector__tool__theme-number-wrapper' ><div className='container__top__theme-selector__tool__theme-number-wrapper__row'><span>1</span><span>2</span><span>3</span>
 
         </div>
-        <div className="toggler"></div>
+        <div className="container__top__theme-selector__tool__theme-number-wrapper__toggler"> <div className="container__top__theme-selector__tool__theme-number-wrapper__toggler__circle"></div></div>
         </div>
       </div>
       </div>
@@ -21,6 +21,10 @@ function App() {
       <div className="container__scr__text-wrapper"><p >399,981</p></div>
     </div>
     <div className="container__keyboard">
+      <Button/>
+      <Button/>
+      <Button/>
+      <Button/>
       <Button/>
       <Button/>
       <Button/>
