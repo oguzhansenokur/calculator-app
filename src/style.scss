@@ -1,17 +1,19 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'League Spartan', sans-serif;
+
 }
 
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;700&display=swap');
 :root{
     //theme 1
     --very-dark-desaturatedblue: hsl(222, 26%, 31%);
-    --very-dark-desaturated-blue: hsl(223, 31%, 20%);
-    --very-dark-desaturated-blue: hsl(224, 36%, 15%);
+    --very-dark-desaturated-blue1: hsl(223, 31%, 20%);
+    --very-dark-desaturated-blue2: hsl(224, 36%, 15%);
     //keys
     --desaturated-dark-blue: hsl(225, 21%, 49%);
-    --desaturated-dark-blue: hsl(224, 28%, 35%);
+    --desaturated-dark-blue1: hsl(224, 28%, 35%);
 
     --red: hsl(6, 63%, 50%);
     --dark-red: hsl(6, 70%, 34%);
@@ -72,14 +74,22 @@
 --light-yellow: hsl(52, 100%, 62%);
 --very-dark-blue: hsl(198, 20%, 13%);
 --white : hsl(0, 0%, 100%);
+font-family: 'League Spartan', sans-serif;
+}
+.page{
+    &.theme-1{
+        background-color: var(--very-dark-desaturatedblue);
 
+    }
+    height: 100vh;
+    padding-top: 2.5%;
 }
 
 .container{
     max-width: 540px;
     min-width: 335px;
     padding: 0 10px;
-    margin: 5% auto;
+    margin: 0 auto;
 
     &__top{
         display: flex;
@@ -89,6 +99,10 @@
         &__calc{
             font-size: 30px;
             font-weight: 700;
+            &.theme-1{
+                color: white;
+            }
+   
         }
         &__theme-selector{
             display: flex;
@@ -108,18 +122,28 @@
                       span:last-child{
                         margin-right: 0;
                       }
+                      &.theme-1{
+                        span{
+                            color: white;
+                        }
+                      }
                     }
                     &__toggler{
                         width: 64px;
-                        background-color: green;
+                        &.theme-1{
+                            background-color: var(--very-dark-desaturated-blue2);
+
+                        }
                         height: 26px;
                         border-radius: 100px;
                         &__circle{
                             width: 16px;
                             height: 16px;
-                            background-color: orange;
                             border-radius: 100px;
                             margin: 5px 5px ;
+                            &.theme-1{
+                                background-color: var(--dark-red);
+                            }
                         }
                     }
                 }
@@ -127,19 +151,29 @@
             &__theme{
             font-size: 12px;
             font-weight: 700;
+            &.theme-1{
+                color: white;
+            }
             }
 
         }
     }
 
     &__scr{
-        background-color: blue;
+        &.theme-1{
+            background-color: var(--very-dark-desaturated-blue2);
+
+        }
         width: 100%;
         padding: 41px 0;
+        border-radius: 10px;
         text-align: right;
         margin-bottom: 36px;
         &__text-wrapper{
         padding: 0 23px;
+        &.theme-1{
+            color: white;
+        }
     
         p{
             font-size: 50px;
@@ -155,22 +189,78 @@
         width: 100%;
         flex-wrap: wrap;
         justify-content: center;
-        background-color: red;
         padding: 20px 0;
         gap: 20px;
+        border-radius: 10px;
+        align-items: baseline;
+        &.theme-1{
+        background-color: var(--very-dark-desaturated-blue1);
 
+        }
     }
     
 }
 
 .button{
     max-width: 104px;
+    outline: none;
     min-width: 60px;
     width: 104px;
-    border: 1px solid black;
-    padding: 25px 0;
-    p{
-        text-align: center;
+    border-radius: 15px;
+    height: 60px;
+    font-size: 28px;
+    font-weight: 700;
+    &.theme-1-num{
+        background-color: var(--light-grayish-orange);
+        border-bottom: 4px solid var(--dark-grayish-orange);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        &:active{
+            border: none;
+            height: 55px;
+            transform: translateY(2px);
+        }
+  
+   
     }
+    &.theme-1-ans{
+        background-color: var(--red);
+        border-bottom: 4px solid var(--dark-red);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: white;
+        &:active{
+            border: none;
+            height: 55px;
+            transform: translateY(2px);
+        }
+  
+   
+    }
+    &.theme-1-act{
+        background-color: var(--desaturated-dark-blue);
+        border-bottom: 4px solid var(--desaturated-dark-blue1);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: white;
+        &:active{
+            border: none;
+            height: 55px;
+            transform: translateY(2px);
+        }
+  
+   
+    }
+    &.double-width{
+        max-width: 226px;
+        width: 226px ;
+        min-width: 120px;
+    }
+   
+   
+ 
 
 }

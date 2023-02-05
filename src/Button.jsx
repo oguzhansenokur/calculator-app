@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Button({type='number',theme='1',text='X',val=text}) {
+export default function Button({color='num',type='number',theme='theme-1',text='X',val=text}) {
   return (
-    <div className='button' ><p>{text}</p></div>
+    <button role='button'  className={type==='widest' ? 'button double-width '+theme : 'button '+theme}>{text}</button>
   )
 }
