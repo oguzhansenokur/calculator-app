@@ -3,19 +3,22 @@ import './style.scss';
 import React from 'react';
 
 function App() {
-  const [theme, setTheme] = React.useState('theme-3');
+  const [theme, setTheme] = React.useState('theme-1');
   const [selectedTheme,setSelectedTheme] = React.useState(1)
+  console.log(theme,selectedTheme)
   const toggler =()=>{
-    if(selectedTheme===3)
+    if(theme==='theme-1')
     {
-      setSelectedTheme(1);
+      setTheme('theme-2')
+    }
+    else if(theme==='theme-2')
+    {
+      setTheme('theme-3')
+    }
+    else if(theme==='theme-3')
+    {
       setTheme('theme-1')
     }
-    else{
-      setSelectedTheme(selectedTheme+1)
-      setTheme('theme-'+String(selectedTheme))
-    }
-    
   }
   return (
     <div className={'page '+theme}>
@@ -28,7 +31,7 @@ function App() {
         <div className='container__top__theme-selector__tool__theme-number-wrapper' ><div className={'container__top__theme-selector__tool__theme-number-wrapper__row '+theme}><span>1</span><span>2</span><span>3</span>
 
         </div>
-        <div className={"container__top__theme-selector__tool__theme-number-wrapper__toggler "+theme}> <div className={"container__top__theme-selector__tool__theme-number-wrapper__toggler__circle "+theme}></div></div>
+        <div className={"container__top__theme-selector__tool__theme-number-wrapper__toggler "+theme}> <div role={'button'} onClick={toggler} className={theme === "theme-1" ? "container__top__theme-selector__tool__theme-number-wrapper__toggler__circle "+theme+' margin-1' : theme==='theme-2' ? "container__top__theme-selector__tool__theme-number-wrapper__toggler__circle "+theme+' margin-2' : theme==='theme-3' ?  "container__top__theme-selector__tool__theme-number-wrapper__toggler__circle "+theme+' margin-3' :''}></div></div>
         </div>
       </div>
       </div>

@@ -91,6 +91,10 @@ font-family: 'League Spartan', sans-serif;
     padding-top: 2.5%;
 }
 
+
+
+
+
 .container{
     max-width: 540px;
     min-width: 335px;
@@ -125,6 +129,7 @@ font-family: 'League Spartan', sans-serif;
                     display: flex;
                     flex-direction: column;
                     &__row{
+                        padding-bottom: 5px;
                         text-align: center;
                       span{
                         margin-right: 10px;
@@ -170,7 +175,19 @@ font-family: 'League Spartan', sans-serif;
                             width: 16px;
                             height: 16px;
                             border-radius: 100px;
-                            margin: 5px 5px ;
+                            margin: 5px ;
+                            cursor: pointer;
+                            animation: step-1 0.5s;
+                            transition: 0.4s;
+                            &.margin-1{
+                                margin-left: 5px;
+                            }
+                            &.margin-2{
+                                margin-left: 23px;
+                            }
+                            &.margin-3{
+                                margin-left: 41px;
+                            }
                             &.theme-1{
                                 background-color: var(--dark-red);
                             }
@@ -187,6 +204,7 @@ font-family: 'League Spartan', sans-serif;
             &__theme{
             font-size: 12px;
             font-weight: 700;
+            padding-bottom: 5px;
             &.theme-1{
                 color: white;
             }
