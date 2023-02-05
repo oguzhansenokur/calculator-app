@@ -4,8 +4,8 @@ import React from 'react';
 
 function App() {
   const [theme, setTheme] = React.useState('theme-1');
-  const [selectedTheme,setSelectedTheme] = React.useState(1)
-  console.log(theme,selectedTheme)
+  const [number,setNumber]= React.useState('');
+  
   const toggler =()=>{
     if(theme==='theme-1')
     {
@@ -37,27 +37,27 @@ function App() {
       </div>
     </div>
     <div className={"container__scr "+theme}>
-      <div className={"container__scr__text-wrapper "+theme}><p >399,981</p></div>
+      <div className={"container__scr__text-wrapper "+theme}><p style={{height:'32px'}} >{number}</p></div>
     </div>
     <div className={"container__keyboard "+theme}>
-      <Button text='7' theme={theme+'-num'} />
-      <Button text='8' theme={theme+'-num'} />
-      <Button text='9' theme={theme+'-num'}/>
-      <Button text='DEL' theme={theme+'-act'} />
-      <Button text='4' theme={theme+'-num'} />
-      <Button text='5' theme={theme+'-num'}/>
-      <Button text='6' theme={theme+'-num'}/>
-      <Button text='+' theme={theme+'-num'} />
-      <Button text='1' theme={theme+'-num'} />
-      <Button text='2' theme={theme+'-num'} />
-      <Button text='3' theme={theme+'-num'} />
-      <Button text='-' theme={theme+'-num'} />
-      <Button text='.' theme={theme+'-num'} />
-      <Button text='0' theme={theme+'-num'} />
-      <Button text='/' theme={theme+'-num'} />
-      <Button text='X' theme={theme+'-num'} />
-      <Button type='widest' theme={theme+'-act'} text='RESET'/>
-      <Button type='widest' theme={theme+'-ans'} text='='/>
+      <Button setNumber={setNumber} number={number} text='7' theme={theme+'-num'} />
+      <Button setNumber={setNumber} number={number} text='8' theme={theme+'-num'} />
+      <Button setNumber={setNumber} number={number} text='9' theme={theme+'-num'}/>
+      <Button setNumber={setNumber} number={number} text='DEL' theme={theme+'-act'} />
+      <Button setNumber={setNumber} number={number} text='4' theme={theme+'-num'} />
+      <Button setNumber={setNumber} number={number} text='5' theme={theme+'-num'}/>
+      <Button setNumber={setNumber} number={number} text='6' theme={theme+'-num'}/>
+      <Button setNumber={setNumber} number={number} text='+' theme={theme+'-num'} />
+      <Button setNumber={setNumber} number={number} text='1' theme={theme+'-num'} />
+      <Button setNumber={setNumber} number={number} text='2' theme={theme+'-num'} />
+      <Button setNumber={setNumber} number={number} text='3' theme={theme+'-num'} />
+      <Button setNumber={setNumber} number={number} text='-' theme={theme+'-num'} />
+      <Button setNumber={setNumber} number={number} text='.' theme={theme+'-num'} />
+      <Button setNumber={setNumber} number={number} text='0' theme={theme+'-num'} />
+      <Button setNumber={setNumber} number={number} text='/' theme={theme+'-num'} />
+      <Button setNumber={setNumber} number={number} text='x' val={'*'} theme={theme+'-num'} />
+      <Button setNumber={setNumber} number={number} type='widest' theme={theme+'-act'} text='RESET'/>
+      <Button  setNumber={setNumber} number={number} type='widest' theme={theme+'-ans'} text='='/>
     
 
     </div>
