@@ -3,7 +3,7 @@ import './style.scss';
 import React from 'react';
 
 function App() {
-  const [theme, setTheme] = React.useState('theme-2');
+  const [theme, setTheme] = React.useState('theme-3');
   const [selectedTheme,setSelectedTheme] = React.useState(1)
   const toggler =()=>{
     if(selectedTheme===3)

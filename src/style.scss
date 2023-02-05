@@ -56,7 +56,7 @@
 // Backgrounds
 
 --very-dark-violet: hsl(268, 75%, 9%);
---Very-dark-violet: hsl(268, 71%, 12%);
+--very-dark-violet2: hsl(268, 71%, 12%);
 
 // Keys
 
@@ -66,7 +66,7 @@
 --pure-cyan : hsl(176, 100%, 44%);
 --soft-cyan : hsl(177, 92%, 70%);
 
---ver-dark-violet : hsl(268, 47%, 21%);
+--ver-dark-violet-key : hsl(268, 47%, 21%);
 --dark-magenta: hsl(290, 70%, 36%);
 
 // Text
@@ -80,6 +80,12 @@ font-family: 'League Spartan', sans-serif;
     &.theme-1{
         background-color: var(--very-dark-desaturatedblue);
 
+    }
+    &.theme-2{
+        background-color: var(--light-gray);
+    }
+    &.theme-3{
+        background-color: var(--very-dark-violet);
     }
     height: 100vh;
     padding-top: 2.5%;
@@ -101,6 +107,12 @@ font-family: 'League Spartan', sans-serif;
             font-weight: 700;
             &.theme-1{
                 color: white;
+            }
+            &.theme-2{
+                color: var(--very-dark-grayish-yellow);
+            }
+            &.theme-3{
+                color: var(--light-yellow);
             }
    
         }
@@ -127,6 +139,18 @@ font-family: 'League Spartan', sans-serif;
                             color: white;
                         }
                       }
+                      &.theme-2{
+                        span{
+                            color: var(--very-dark-grayish-yellow);
+                            
+                        }
+                      }
+                      &.theme-3{
+                        span{
+                            color: var(--light-yellow);
+                            
+                        }
+                      }
                     }
                     &__toggler{
                         width: 64px;
@@ -134,6 +158,12 @@ font-family: 'League Spartan', sans-serif;
                             background-color: var(--very-dark-desaturated-blue2);
 
                         }
+                        &.theme-2{
+                            background-color: var(--grayish-red);
+                          }
+                          &.theme-3{
+                            background-color: var(--very-dark-violet2);
+                          }
                         height: 26px;
                         border-radius: 100px;
                         &__circle{
@@ -144,6 +174,12 @@ font-family: 'League Spartan', sans-serif;
                             &.theme-1{
                                 background-color: var(--dark-red);
                             }
+                            &.theme-2{
+                                background-color: var(--dark-orange);
+                              }
+                              &.theme-3{
+                                background-color: var(--soft-cyan);
+                              }
                         }
                     }
                 }
@@ -154,6 +190,12 @@ font-family: 'League Spartan', sans-serif;
             &.theme-1{
                 color: white;
             }
+            &.theme-2{
+                color: var(--very-dark-grayish-yellow);
+            }
+            &.theme-3{
+                color: var(--light-yellow);
+            }
             }
 
         }
@@ -162,7 +204,12 @@ font-family: 'League Spartan', sans-serif;
     &__scr{
         &.theme-1{
             background-color: var(--very-dark-desaturated-blue2);
-
+        }
+        &.theme-2{
+            background-color: var(--very-light-gray);
+        }
+        &.theme-3{
+            background-color: var(--very-dark-violet2);
         }
         width: 100%;
         padding: 41px 0;
@@ -173,6 +220,12 @@ font-family: 'League Spartan', sans-serif;
         padding: 0 23px;
         &.theme-1{
             color: white;
+        }
+        &.theme-2{
+            color: var(--very-dark-grayish-yellow);
+        }
+        &.theme-3{
+            color: var(--light-yellow);
         }
     
         p{
@@ -197,6 +250,14 @@ font-family: 'League Spartan', sans-serif;
         background-color: var(--very-dark-desaturated-blue1);
 
         }
+        &.theme-2{
+            background-color: var(--grayish-red);
+    
+            }
+            &.theme-3{
+                background-color: var(--ver-dark-violet);
+        
+                }
     }
     
 }
@@ -224,6 +285,37 @@ font-family: 'League Spartan', sans-serif;
   
    
     }
+    &.theme-2-num{
+        background-color: var(--light-grayish-yellow);
+        border-bottom: 4px solid var(--dark-grayish-orange);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: var(--very-dark-grayish-yellow);
+        &:active{
+            border: none;
+            height: 55px;
+            transform: translateY(2px);
+        }
+  
+   
+    }
+    &.theme-3-num{
+        background-color: var(--ver-dark-violet-key);
+        border-bottom: 4px solid var(--dark-magenta);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: var(--light-yellow);
+
+        &:active{
+            border: none;
+            height: 55px;
+            transform: translateY(2px);
+        }
+  
+   
+    }
     &.theme-1-ans{
         background-color: var(--red);
         border-bottom: 4px solid var(--dark-red);
@@ -239,9 +331,69 @@ font-family: 'League Spartan', sans-serif;
   
    
     }
+    &.theme-2-ans{
+        background-color: var(--orange);
+        border-bottom: 4px solid var(--dark-orange);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: white;
+        &:active{
+            border: none;
+            height: 55px;
+            transform: translateY(2px);
+        }
+  
+   
+    }
+    &.theme-3-ans{
+        background-color: var(--pure-cyan);
+        border-bottom: 4px solid var(--soft-cyan);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: black;
+        &:active{
+            border: none;
+            height: 55px;
+            transform: translateY(2px);
+        }
+  
+   
+    }
     &.theme-1-act{
         background-color: var(--desaturated-dark-blue);
         border-bottom: 4px solid var(--desaturated-dark-blue1);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: white;
+        &:active{
+            border: none;
+            height: 55px;
+            transform: translateY(2px);
+        }
+  
+   
+    }
+    &.theme-2-act{
+        background-color: var(--dark-moderate-cyan);
+        border-bottom: 4px solid var(--very-dark-cyan);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: white;
+        &:active{
+            border: none;
+            height: 55px;
+            transform: translateY(2px);
+        }
+  
+   
+    }
+    &.theme-3-act{
+        background-color: var(--dark-violet);
+        border-bottom: 4px solid var(--vivid-magenta);
         border-top: none;
         border-left: none;
         border-right: none;
