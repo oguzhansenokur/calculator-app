@@ -1,23 +1,35 @@
 import Button from './Button';
 import './style.scss';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function App() {
-  const [theme, setTheme] = React.useState('theme-1');
+  const [theme, setTheme] = React.useState(localStorage.getItem('lastTheme') ? localStorage.getItem('lastTheme') : 'theme-1');
   const [number,setNumber]= React.useState('');
+  
+  useEffect(() => {
+
+    if(lastTheme!=='')
+      {
+      
+      }    
+  }, [theme])
   
   const toggler =()=>{
     if(theme==='theme-1')
     {
       setTheme('theme-2')
+      localStorage.setItem('lastTheme','theme-2')
     }
     else if(theme==='theme-2')
     {
       setTheme('theme-3')
+      localStorage.setItem('lastTheme','theme-3')
+
     }
     else if(theme==='theme-3')
     {
       setTheme('theme-1')
+      localStorage.setItem('lastTheme','theme-1')
     }
   }
   return (
