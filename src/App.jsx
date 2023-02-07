@@ -6,13 +6,7 @@ function App() {
   const [theme, setTheme] = React.useState(localStorage.getItem('lastTheme') ? localStorage.getItem('lastTheme') : 'theme-1');
   const [number,setNumber]= React.useState('');
   
-  useEffect(() => {
-
-    if(lastTheme!=='')
-      {
-      
-      }    
-  }, [theme])
+ 
   
   const toggler =()=>{
     if(theme==='theme-1')
