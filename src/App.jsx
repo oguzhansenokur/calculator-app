@@ -37,7 +37,7 @@ function App() {
       </div>
     </div>
     <div className={"container__scr "+theme}>
-      <div className={"container__scr__text-wrapper "+theme}><p style={{height:'32px'}} >{number}</p></div>
+      <div className={"container__scr__text-wrapper "+theme}><p className='number-text' style={number.length<18 && number.length>=0 ? {fontSize:'36px'}:number.length>=18 && number.length<24 ? {fontSize:'24px'}:{fontSize:'21px'}} >{number}</p></div>
     </div>
     <div className={"container__keyboard "+theme}>
       <Button setNumber={setNumber} number={number} text='7' theme={theme+'-num'} />

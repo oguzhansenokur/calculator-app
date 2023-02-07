@@ -93,7 +93,9 @@ font-family: 'League Spartan', sans-serif;
 
 
 
-
+.number-text{
+    font-size: 32px;
+}
 
 .container{
     max-width: 540px;
@@ -236,6 +238,7 @@ font-family: 'League Spartan', sans-serif;
         margin-bottom: 36px;
         &__text-wrapper{
         padding: 0 23px;
+        height: 32px;
         &.theme-1{
             color: white;
         }
@@ -429,8 +432,182 @@ font-family: 'League Spartan', sans-serif;
         width: 226px ;
         min-width: 120px;
     }
-   
-   
- 
+}
 
+@media screen and (max-width:500px) {
+    .page{
+        width: 100%;
+        min-width: 375px;
+    }
+    .container{
+        max-width: 350px;
+        min-width: 350px;
+        padding: 0 5px;
+        margin: 0 auto;
+        &__top{
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding-bottom: 30px;
+        }
+    }
+
+    .button{
+    max-width: 104px;
+    outline: none;
+    min-width: 60px;
+    width: 104px;
+    border-radius: 15px;
+    height: 60px;
+    font-size: 28px;
+    font-weight: 700;
+    &.theme-1-num{
+        background-color: var(--light-grayish-orange);
+        border-bottom: 4px solid var(--dark-grayish-orange);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        &:active{
+            border: none;
+            height: 55px;
+            transform: translateY(2px);
+        }
+  
+   
+    }
+    &.theme-2-num{
+        background-color: var(--light-grayish-yellow);
+        border-bottom: 4px solid var(--dark-grayish-orange);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: var(--very-dark-grayish-yellow);
+        &:active{
+            border: none;
+            height: 55px;
+            transform: translateY(2px);
+        }
+  
+   
+    }
+    &.theme-3-num{
+        background-color: var(--ver-dark-violet-key);
+        border-bottom: 4px solid var(--dark-magenta);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: var(--light-yellow);
+
+        &:active{
+            border: none;
+            height: 55px;
+            transform: translateY(2px);
+        }
+  
+   
+    }
+    &.theme-1-ans{
+        background-color: var(--red);
+        border-bottom: 4px solid var(--dark-red);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: white;
+        &:active{
+            border: none;
+            height: 55px;
+            transform: translateY(2px);
+        }
+  
+   
+    }
+    &.theme-2-ans{
+        background-color: var(--orange);
+        border-bottom: 4px solid var(--dark-orange);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: white;
+        &:active{
+            border: none;
+            height: 55px;
+            transform: translateY(2px);
+        }
+  
+   
+    }
+    &.theme-3-ans{
+        background-color: var(--pure-cyan);
+        border-bottom: 4px solid var(--soft-cyan);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: black;
+        &:active{
+            border: none;
+            height: 55px;
+            transform: translateY(2px);
+        }
+  
+   
+    }
+    &.theme-1-act{
+        background-color: var(--desaturated-dark-blue);
+        border-bottom: 4px solid var(--desaturated-dark-blue1);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: white;
+        &:active{
+            border: none;
+            height: 55px;
+            transform: translateY(2px);
+        }
+  
+   
+    }
+    &.theme-2-act{
+        background-color: var(--dark-moderate-cyan);
+        border-bottom: 4px solid var(--very-dark-cyan);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: white;
+        &:active{
+            border: none;
+            height: 55px;
+            transform: translateY(2px);
+        }
+  
+   
+    }
+    &.theme-3-act{
+        background-color: var(--dark-violet);
+        border-bottom: 4px solid var(--vivid-magenta);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: white;
+        &:active{
+            border: none;
+            height: 55px;
+            transform: translateY(2px);
+        }
+  
+   
+    }
+    &.double-width{
+        max-width: 226px;
+        width: 226px ;
+        min-width: 120px;
+    }
+}
+    .button {
+        width: 60px;
+        min-width: 60px;
+        &.double-width {
+        width: 140px;
+        min-width: 140px;
+        }
+    }
 }
